@@ -10,7 +10,7 @@ while True:
     
     cv2.imshow("test window", frame) # show image in window
     
-    cv2.imwrite(r"C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/train-images/2/image%04i.jpg" %cpt, frame)    #Give path to  train-images/0/ and keep image%04i.jpg as it is in this line. Your images will be stored at train-images/0/ folder
+    cv2.imwrite(r"C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/train-images/2/image%04i.jpg" %cpt, frame)
     
     cpt += 1
 

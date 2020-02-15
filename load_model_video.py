@@ -6,11 +6,11 @@ import faceRecognition as fr
 print (fr)
 
 face_recognizer=cv2.face.LBPHFaceRecognizer_create()
-face_recognizer.read(r'C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/trainingData.yml')    #Give path of where trainingData.yml is saved
+face_recognizer.read(r'C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/trainingData.yml')
 
-cap=cv2.VideoCapture(0)   #If you want to recognise face from a video then replace 0 with video path
+cap=cv2.VideoCapture(0)
 
-name={0:"Balaji", 1:"Srini", 2:"Sree"}    #Change names accordingly.  If you want to recognize only one person then write:- name={0:"name"} thats all. Dont write for id number 1.
+name={0:"Balaji", 1:"Srini"}
 while True:
     ret,test_img=cap.read()
     faces_detected,gray_img=fr.faceDetection(test_img)

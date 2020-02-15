@@ -5,7 +5,7 @@ import os
 import faceRecognition as fr
 print (fr)
 
-test_img = cv2.imread(r'C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/1.jpg')  #Give path to the image which you want to test
+test_img = cv2.imread(r'C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/1.jpg')
 
 faces_detected,gray_img = fr.faceDetection(test_img)
 print("face Detected: ",faces_detected)
@@ -16,7 +16,7 @@ faces,faceID=fr.labels_for_training_data(r'C:/Users/balajiam/Documents/ML Data A
 face_recognizer=fr.train_classifier(faces,faceID)
 face_recognizer.save(r'C:/Users/balajiam/Documents/ML Data Analysis/Face-Recognition-master/trainingData.yml') #It will save the trained model. Just give path to where you want to save
 
-name={0:"Balaji", 1:"Srini", 2:"Sree"}    #Change names accordingly. If you want to recognize only one person then write:- name={0:"name"} thats all. Dont write for id number 1.
+name={0:"Balaji", 1:"Srini"}
 
 
 for face in faces_detected:
